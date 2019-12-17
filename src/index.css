@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('Pixel-LCD-7.woff') format('woff')
+
+}

@@ -1,9 +1,7 @@
 export const STAGE_WIDTH = 12;
 export const STAGE_HEIGHT = 20;
 
-//May need to remove the curly braces... afternot didnt need to remove curly braces
-// just needed a return value since i chose to use them. If I used nothing I wouldnt
-// Need a return. When something is being rendered to the DOM use return
+
 export const createStage = () => {
   return (  Array.from(Array(STAGE_HEIGHT), () =>
     new Array(STAGE_WIDTH).fill([0, 'clear'])

@@ -35,7 +35,7 @@ const movePlayer = (dir) => {
 
 const startGame = () => {
   setStage(createStage());
-  setDropTime(1000);
+  setDropTime(650);
   resetPlayer();
   setGameOver(false);
   setScore(0);
@@ -47,7 +47,7 @@ const startGame = () => {
 const drop = () => {
   if (rows > (level + 1) * 10) {
     setLevel(prev => prev + 1);
-    setDropTime( 1050 / (level + 1) + 400);
+    setDropTime( 250 / (level + 1) + 400);
   }
   //y = 1 because we move one step down at a time
   if(!checkCollision(player, stage, {x: 0, y: 1})) {
@@ -67,13 +67,13 @@ const drop = () => {
 const keyUp = ({keyCode}) => {
   if (!gameOver) {
     if (keyCode === 40) {
-      setDropTime( 1000 / (level + 1) + 400);
+      setDropTime( 250 / (level + 1) + 400);
     }
   }
 }
 
 const dropPlayer = () => {
-  setDropTime(null);
+  //setDropTime(null);
   drop();
 }
 

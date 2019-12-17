@@ -12,6 +12,8 @@ export const useStage = (player, resetPlayer) => {
     setRowsCleared(0)
     const sweepRows = newStage =>
       newStage.reduce((cellArray, row) => {
+          // if we cant find an empty cell in our row then return -1
+          //checks each row until it reaches a non filled row.
         if (row.findIndex(cell => cell[0] === 0) === -1) {
           setRowsCleared(prev => prev + 1);
           //adds a new empty row to the top of the stage
